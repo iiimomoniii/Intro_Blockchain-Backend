@@ -7,18 +7,17 @@ namespace EthereumWallet
     {
         static void Main(string[] args)
         {
-          //create wallet account (HDWallet)
-          //1. NBitcoin.Wordlist.English (random English alphabet)
-          //2. NBitcoin.WordCount.TwentyFour (from 1. English alphabet In 24 digit for private key)
-          var wallet = new Wallet(NBitcoin.Wordlist.English, NBitcoin.WordCount.TwentyFour);
-          //3. create account and use private key from 2.
-          var account = wallet.GetAccount(0);
-          //4.remember account by wallet.wor
-          var mnemonic = string.Join(" ", wallet.Words); 
-          //print account address
-          Debug.WriteLine(mnemonic);
-          //result => cypto ramdom private key for owner of wallet
+          //0. result => cypto ramdom private key for owner of wallet
           //hurt test spare where age vapor advice elder betray column scan measure police bacon auto dial diesel lesson that opinion memory speed another eye
+
+          //1. use private key for get wallet
+          var wallet = new Wallet("hurt test spare where age vapor advice elder betray column scan measure police bacon auto dial diesel lesson that opinion memory speed another eye","");
+          var account = wallet.GetAccount(0);
+          var mnemonic = string.Join(" ", wallet.Words); 
+          //3. print wallet from private key
+          Debug.WriteLine(account.Address);
+          //result
+          //0xFe8dC03EA6E8784C1f7BfB5Da508505609fE85C0
         }
     }
 }
