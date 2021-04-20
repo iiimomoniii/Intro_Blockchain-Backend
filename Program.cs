@@ -17,8 +17,8 @@ namespace EthereumWallet
           var mnemonic = string.Join(" ", wallet.Words); 
           //print account address
           Debug.WriteLine(mnemonic);
-      
-        
+          //result => 
+          //hurt test spare where age vapor advice elder betray column scan measure police bacon auto dial diesel lesson that opinion memory speed another eye
         }
     }
 }
